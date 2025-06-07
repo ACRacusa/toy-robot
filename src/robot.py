@@ -1,4 +1,5 @@
-DIRECTIONS = ['NORTH', 'EAST', 'SOUTH', 'WEST']
+DIRECTIONS = ["NORTH", "EAST", "SOUTH", "WEST"]
+
 
 class Robot:
     def __init__(self):
@@ -20,3 +21,22 @@ class Robot:
         if self.placed:
             return f"{self.x},{self.y},{self.facing}"
         return None
+
+    def move(self, table):
+        if not self.placed:
+            return
+
+        move_map = {
+            "NORTH": (0, 1),
+            "EAST": (1, 0),
+            "SOUTH": (0, -1),
+            "WEST": (-1, 0),
+        }
+
+        dx, dy = move_map[self.facing]
+        new_x = self.x + dx
+        new_y = self.y + dy
+
+        if table.is_valid_position(new_x, new_y):
+            self.x = new_x
+            self.y = new_y

@@ -1,5 +1,6 @@
 from src.table import Table
 
+
 def test_valid_positions():
     table = Table()
     assert table.is_valid_position(0, 0)
