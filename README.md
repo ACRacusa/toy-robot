@@ -24,13 +24,6 @@ Or run commands from a file:
 ```
 python run.py command.txt
 ```
-
-Alternative ways to run:
-```
-python3 -m src.main
-python3 -m src.main command.txt
-```
-
 ## Commands
 
 - `PLACE X,Y,DIRECTION` - Put the robot on the table at position X,Y facing DIRECTION
