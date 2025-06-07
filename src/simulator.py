@@ -4,13 +4,7 @@ from .config import TABLE_WIDTH, TABLE_HEIGHT
 
 
 class Simulator:
-    """
-    A simulator that manages a toy robot on a table.
-    
-    The simulator processes commands to control the robot's movement and position
-    on a configurable table. It handles PLACE, MOVE, LEFT, RIGHT, and REPORT commands.
-    """
-
+    # Processes robot commands
     def __init__(self):
         self.robot = Robot()
         self.table = Table(TABLE_WIDTH, TABLE_HEIGHT)
