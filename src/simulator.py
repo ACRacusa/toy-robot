@@ -1,6 +1,7 @@
 from src.robot import Robot
 from src.table import Table
 
+
 class Simulator:
     """
     A simulator that manages a toy robot on a table.
@@ -8,6 +9,7 @@ class Simulator:
     The simulator processes commands to control the robot's movement and position
     on a 5x5 table. It handles PLACE, MOVE, LEFT, RIGHT, and REPORT commands.
     """
+
     def __init__(self):
         self.robot = Robot()
         self.table = Table()

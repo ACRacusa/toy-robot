@@ -1,6 +1,7 @@
 import sys
 from src.simulator import Simulator
 
+
 def main():
     simulator = Simulator()
 
@@ -25,6 +26,7 @@ def main():
             except KeyboardInterrupt:
                 print("\nExiting.")
                 break
+
 
 if __name__ == "__main__":
     main()

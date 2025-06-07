@@ -42,12 +42,11 @@ class Robot:
             self.y = new_y
 
     def left(self):
-      if self.placed:
-          idx = (DIRECTIONS.index(self.facing) - 1) % 4
-          self.facing = DIRECTIONS[idx]
+        if self.placed:
+            idx = (DIRECTIONS.index(self.facing) - 1) % 4
+            self.facing = DIRECTIONS[idx]
 
     def right(self):
         if self.placed:
             idx = (DIRECTIONS.index(self.facing) + 1) % 4
             self.facing = DIRECTIONS[idx]
-
