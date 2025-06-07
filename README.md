@@ -60,7 +60,7 @@ The program works out of the box with a 5x5 table. To customize the table size:
 
 **Option 1: Environment variables**
 ```bash
-TABLE_WIDTH=10 TABLE_HEIGHT=8 python3 run.py
+TABLE_WIDTH=10 TABLE_HEIGHT=8 python run.py
 ```
 
 **Option 2: .env file** (requires `pip install python-dotenv`)
