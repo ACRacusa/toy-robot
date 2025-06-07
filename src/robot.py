@@ -40,3 +40,14 @@ class Robot:
         if table.is_valid_position(new_x, new_y):
             self.x = new_x
             self.y = new_y
+
+    def left(self):
+      if self.placed:
+          idx = (DIRECTIONS.index(self.facing) - 1) % 4
+          self.facing = DIRECTIONS[idx]
+
+    def right(self):
+        if self.placed:
+            idx = (DIRECTIONS.index(self.facing) + 1) % 4
+            self.facing = DIRECTIONS[idx]
+
