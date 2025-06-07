@@ -8,26 +8,27 @@ The robot sits on a square table and you can control it with basic commands. It 
 
 ## Setup
 
-Install dependencies:
+Install dependencies (optional - only needed for .env file support):
 ```
 pip install -r requirements.txt
 ```
 
-Configure table size (optional):
-1. Copy `.env.example` to `.env`
-2. Edit the `TABLE_WIDTH` and `TABLE_HEIGHT` values
-3. Default is 5x5 if no config file exists
-
 ## Running it
 
-Interactive mode (type commands one by one):
+Interactive mode:
 ```
-python3 src/main.py
+python run.py
 ```
 
 Or run commands from a file:
 ```
-python3 src/main.py command.txt
+python run.py command.txt
+```
+
+Alternative ways to run:
+```
+python3 -m src.main
+python3 -m src.main command.txt
 ```
 
 ## Commands
@@ -62,7 +63,15 @@ This puts the robot at (0,0) facing north, moves it to (0,1), turns it to face e
 
 ## Configuration
 
-Create a `.env` file to customize table size:
+The program works out of the box with a 5x5 table. To customize the table size:
+
+**Option 1: Environment variables**
+```bash
+TABLE_WIDTH=10 TABLE_HEIGHT=8 python3 run.py
+```
+
+**Option 2: .env file** (requires `pip install python-dotenv`)
+Create a `.env` file:
 ```
 TABLE_WIDTH=10
 TABLE_HEIGHT=8
@@ -79,6 +88,7 @@ pytest
 
 ## Files
 
+- `run.py` - Easy way to run the program
 - `src/main.py` - Main program
 - `src/robot.py` - Robot class  
 - `src/simulator.py` - Handles commands

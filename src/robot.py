@@ -1,5 +1,19 @@
 DIRECTIONS = ["NORTH", "EAST", "SOUTH", "WEST"]
 
+LEFT_TURNS = {
+    "NORTH": "WEST",
+    "WEST": "SOUTH", 
+    "SOUTH": "EAST",
+    "EAST": "NORTH"
+}
+
+RIGHT_TURNS = {
+    "NORTH": "EAST",
+    "EAST": "SOUTH",
+    "SOUTH": "WEST", 
+    "WEST": "NORTH"
+}
+
 
 class Robot:
     def __init__(self):
@@ -43,10 +57,8 @@ class Robot:
 
     def left(self):
         if self.placed:
-            idx = (DIRECTIONS.index(self.facing) - 1) % 4
-            self.facing = DIRECTIONS[idx]
+            self.facing = LEFT_TURNS[self.facing]
 
     def right(self):
         if self.placed:
-            idx = (DIRECTIONS.index(self.facing) + 1) % 4
-            self.facing = DIRECTIONS[idx]
+            self.facing = RIGHT_TURNS[self.facing]

@@ -1,6 +1,6 @@
-from src.robot import Robot
-from src.table import Table
-from src.config import TABLE_WIDTH, TABLE_HEIGHT
+from .robot import Robot
+from .table import Table
+from .config import TABLE_WIDTH, TABLE_HEIGHT
 
 
 class Simulator:
